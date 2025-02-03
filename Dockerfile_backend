@@ -1,8 +1,8 @@
 FROM python:slim-bullseye
 WORKDIR /app
-COPY app/requirements.txt .
+COPY flask_app_end_to_end/backend/app .
 RUN pip3 install -r requirements.txt
-COPY /app/  .
+COPY /flask_app_end_to_end/backend/app/  .
 EXPOSE 8080
 CMD ["python" , "app.py"]
 
